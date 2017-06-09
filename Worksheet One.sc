@@ -5,15 +5,16 @@ println (a)
 
 
 // Create a method that accepts a string as a parameter, and then outputs that string.
-def printString (stringTopPrint: String): Unit = {
-  println(stringTopPrint)
+def printString (stringToPrint: String): Unit = {
+  println(stringToPrint)
 
 }
-println(printString("Emmanuel"))
+printString("Emmanuel")
 
 
 
-// Return types - Create a method that returns a string, in this case “Hello World!”, which you then use to output.
+// Return types - Create a method that returns a string, in this case “Hello World!”,
+// which you then use to output.
 
 def returnString(): String =  {
 
@@ -24,12 +25,13 @@ def returnString(): String =  {
 println(returnString())
 
 
-/* Type Inference Create a method that does not signify a return type and outputs whatever is given to it
+/* Type Inference Create a method that does not signify
+a return type and outputs whatever is given to it
 ,then test it by passing it the follow different data types, Double, String, Integer, Boolean
  */
 
-def receiveValue (any: Any): Unit = {
-  println("hello" + " " + any)
+def receiveValue (something: Any): Unit = {
+  println("hello " + something)
 }
 
 receiveValue("fhycf")
@@ -143,14 +145,47 @@ Once that’s done, add formatting so it’s always outputted as a square.
 */
 
 
-def Iteration2(string: String, value: Int): Unit = {
+def nestedForLoop(singleChar: String, value: Int): Unit = {
 
-  for (i <- 1 to value)
-    for (i <- 1 to value)
-      print(string)
+  for (i <- 1 to value) {
+    for (j <- 1 to value){
+      print(singleChar)
+    }
+    println()
+  }
 }
 
-Iteration2("H", 4)
+nestedForLoop("H", 4)
 
 
+/* Iteration 3 - FizzBuzz
+Create a method that accepts three parameters, two strings and one integer.
+Your method will then loop from 1 to the integer provided,
+outputting the current iteration count every iteration.
+However if the current iteration is divisible by 3, output the first String provided.
+If the current iteration is divisible by 5, output the second String provided.
+If it is divisible by both 3 and 5, then output the concatenation of the two Strings.
+Input-> (Fizz,Buzz,15)
+Output-> 1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz
+*/
+
+
+def fizzBuzz (s1: String, s2: String, end: Int): Unit = {
+
+  for (i <- 1 to end){
+
+     if (i % 3 == 0 && i % 5 == 0)
+    println(s1 + s2)
+
+     else if(i % 3 == 0)
+      println(s1)
+    else if (i % 5 == 0)
+      println(s2)
+
+    else println(i)
+
+  }
+
+}
+fizzBuzz("Fizz","Buzz", 30)
 
