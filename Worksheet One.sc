@@ -187,5 +187,21 @@ def fizzBuzz (s1: String, s2: String, end: Int): Unit = {
   }
 
 }
-fizzBuzz("Fizz","Buzz", 30)
+fizzBuzz("Fizz","Buzz", 15)
+
+/*Iteration 4
+Rewrite your previous three iteration exercises but using method recursion, no loops involved.
+*/
+
+def recursivePa (s1:String, n: Int): Any = {
+
+ if (n == 0)
+   println (" ")
+ else  print(s1)
+  recursivePa(s1, n - 1)
+
+}
+recursivePa("Hi", 3)
+
+
 
