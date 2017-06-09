@@ -200,8 +200,9 @@ def recursivePa (s1:String, n: Int): Any = {
  else  print(s1)
   recursivePa(s1, n - 1)
 
+
 }
-recursivePa("Hi", 3)
+//recursivePa("Hi" , 3, recursivePa())
 
 
 
