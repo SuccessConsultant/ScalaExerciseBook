@@ -71,8 +71,7 @@ def patternMatches(numb: Any): Any = numb match {
   case tuple: Tuple2[Int, Int] => tuple.swap
   case _=>
 }
-patternMatches()
+patternMatches(1,2)
 
 
 
-}
